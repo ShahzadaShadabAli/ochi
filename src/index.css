@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'founder';
+    src: url('../public/founder.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'neue';
+    src: url('../public/neue.ttf') format('truetype'),
+}
+
+.btn-hoverable:hover div {
+    transition: 0.2s ease-in-out;
+    width: 50px;
+    height: 50px;
+    margin-right: 0 !important;
+}
+
+.btn-hoverable:hover {
+    padding-right: 5px !important;
+}
+
+.btn-hoverable:hover div div {
+    display: flex !important;
+}
+
+.da-card {
+    overflow: hidden; /* Ensures the image doesn't affect the card's size */
+    transition: transform 0.7s ease, z-index 0.7s ease;
+}
+
+.da-card:hover {
+    transform: scale(0.96); /* Shrink the card */
+    border-radius: 10px;
+}
+
+.da-card img {
+    border-radius: 10px;
+    transition: transform 0.7s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the card area */
+}
+
+.da-card:hover img {
+    transform: scale(1.1); /* Zoom the image within the card */
+}
+
+nav {
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide-up {
+    transform: translateY(-100%);
+  }
+  
+  /* When scrolling up, slide the navbar down (visible) */
+  .slide-down {
+    transform: translateY(0);
+  }
